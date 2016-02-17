@@ -8,32 +8,20 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
 public class ActionField {
+
 	
-	final int BF_WIDTH = 592;
-	final int BF_HEIGHT = 592;
-	
-	final boolean COLORDED_MODE = false;
-	
-	public static void main(String[] args) throws Exception {
-		Tank bf = new JavaLessons.Tank();
-		bf.runTheGame();
-	}
+//	public static void main(String[] args) throws Exception {
+//		Tank bf = new Tank();
+//		bf.runTheGame();
+//	}
 	
 //	void runTheGame() throws Exception {
 //		//clean();
 //	}
 	
-	public void Tanks() throws Exception {
-		JFrame frame = new JFrame("BATTLE FIELD, DAY 2");
-		frame.setLocation(750, 150);
-		frame.setMinimumSize(new Dimension(BF_WIDTH, BF_HEIGHT + 22));
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		frame.getContentPane().add(frame, this);
-		frame.pack();
-		frame.setVisible(true);
-	}
+	
 
-	//@Override
+	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
