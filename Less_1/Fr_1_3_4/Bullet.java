@@ -23,16 +23,22 @@ public class Bullet {
 		return direction;
 	}
 
+	public Bullet(int x, int y, int direction){
+		this.x = x;
+		this.y = y;
+		this.direction = direction;
+	}
+	
 	public void updateX(int val){
-		x+=val;
+		this.x+=val;
 	}
 	
 	public void updateY(int val){
-		y+=val;
+		this.y+=val;
 	}
 	
 	public void destroy(){
-		x = -100;
-		y = -100;
+		this.x = -100;
+		this.y = -100;
 	}	
 }
