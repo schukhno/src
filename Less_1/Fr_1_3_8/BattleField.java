@@ -36,9 +36,7 @@ public class BattleField {
 	public String scanQuadrant(int v, int h) {
 		return battleField[v][h];
 	}
-	
-	
-	
+		
 	public void updateQuadrant(int v, int h, String setValue) {
 		battleField[v][h] = setValue;
 	}
@@ -50,4 +48,6 @@ public class BattleField {
 	public int getDimentionX(){
 		return battleField[0].length;
 	}
+	
+	
 }
