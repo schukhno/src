@@ -1,6 +1,5 @@
 package Less_1.Fr_1_3_8;
 
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -10,8 +9,20 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-public class ActionField {
-	
+import Less_1.Fr_1_3_8.BattleField;
+import Less_1.Fr_1_3_8.Bullet;
+import Less_1.Fr_1_3_8.Tank;
+
+/**
+ * @version 3.0
+ */
+public class ActionField extends JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	// 1 - top, 2 - bottom, 3 - left, 4 - right
 	private int up = 1;
 	private int down = 2;
@@ -25,7 +36,11 @@ public class ActionField {
 	private Bullet bullet = new Bullet(0, 0, 0);	
 	private Tank tank = new Tank();
 	
-	public void runTheGame() throws Exception {
+
+	/**
+	 * Write your code here.
+	 */
+	void runTheGame() throws Exception {
 		//clean();
 	}
 	
@@ -49,18 +64,18 @@ public class ActionField {
 		return result;
 	}
 	
-	public String getQuadrant(int x, int y) {
+	String getQuadrant(int x, int y) {
         int xValue = x/64;
         int yValue = y/64;
 		String y_x = yValue+"_"+xValue;
 		return y_x;
 	}
 	
-	public String getQuadrantXY(int v, int h) {
+	
+	String getQuadrantXY(int v, int h) {
 		return (v - 1) * 64 + "_" + (h - 1) * 64;
 	}
-	
-	
+
 	private int minusLimit = -14;
 	private int plusLimit = 575;
 	
@@ -93,11 +108,9 @@ public class ActionField {
 		}
 	}
 	
-	
-	
-	
 	public void processTurn(Tank tank){
-				   tank.setDirection = direction;
+				   tank.setDirection();
+				   repaint();
 	}
 	
 	public void processMove(Tank tank){
@@ -131,8 +144,6 @@ public class ActionField {
 	        repaint();
 	        Thread.sleep(tank.getSpeed());
 	}
-	
-	
 	// Magic bellow. Do not worry about this now, you will understand everything in this course.
 	// Please concentrate on your tasks only.
 	
@@ -142,12 +153,12 @@ public class ActionField {
 		bf.runTheGame();
 	}
 
-	public void Tanks() throws Exception {
+	public ActionField() throws Exception {
 		JFrame frame = new JFrame("BATTLE FIELD, DAY 2");
 		frame.setLocation(750, 150);
 		frame.setMinimumSize(new Dimension(battleField.getBF_WIDTH(),battleField.getBF_HEIGHT() + 22));
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		frame.getContentPane().add(frame, this);
+		frame.getContentPane().add(this);
 		frame.pack();
 		frame.setVisible(true);
 	}
