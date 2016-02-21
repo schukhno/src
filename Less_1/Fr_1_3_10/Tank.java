@@ -7,20 +7,10 @@ public class Tank {
 	private int direction = 1;
 	private int speed = 5;
 	
-	private int up = 1;
-	private int down = 2;
-	private int left = 3;
-	private int right = 4;
-	
-	private int shiftOn = 1;
-	private int shiftBullet = 25;
-	
 	private ActionField actionField;
 	private BattleField battleField;
 	private Bullet bullet;
 	
-	private int minusLimit = -14;
-	private int plusLimit = 575;
 	
 	public int getX() {
 		return x;
