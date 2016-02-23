@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 //import java.util.Random;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
@@ -36,7 +37,22 @@ public class ActionField extends JPanel {
 	 * Write your code here.
 	 */
 	void runTheGame() throws Exception {
+        tank.turn(4);
+
         tank.move();
+        tank.move();
+        tank.move();
+        
+        tank.turn(2);
+        tank.fire();
+        tank.fire();
+        tank.fire();
+
+        tank.move();
+        tank.fire();
+        tank.fire();
+        tank.fire();
+
 	}
 	
 	private boolean processInterception() {
@@ -105,9 +121,7 @@ public class ActionField extends JPanel {
 	}
 	
 	public void processTurn(Tank tank){
-		if (this.tank.getDirection() != tank.getDirection()) {
-			this.tank.turn(tank.getDirection());
-		}
+		repaint();
 	}
 	
 	public void processMove(Tank tank) throws InterruptedException{
@@ -119,7 +133,9 @@ public class ActionField extends JPanel {
 		int tankXCoordinate = tank.getX();
 		int tankYCoordinate = tank.getY();
 		
-		while(i<=64){
+		tank.turn(tankDirection);
+		
+		while(i<64){
 		  if(tankDirection==up && tankYCoordinate > 0){	            
 	                tank.updateY(-1);
 	      }
@@ -140,12 +156,17 @@ public class ActionField extends JPanel {
 		}
 	}
 	
+//	public static void main(String[] args) throws Exception {
+//		ActionField af = new ActionField();
+//		af.runTheGame();
+//	}
+	
 	// Magic bellow. Do not worry about this now, you will understand everything in this course.
 	// Please concentrate on your tasks only.
 	
 	public ActionField() throws Exception {
 		battleField = new BattleField();
-		tank = new Tank(0,0,0,this,battleField);
+		tank = new Tank(this,battleField);
 		bullet = new Bullet(-100,-100,-1);
 		
 		JFrame frame = new JFrame("BATTLE FIELD, DAY 2");
