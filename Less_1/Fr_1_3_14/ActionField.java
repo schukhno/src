@@ -28,9 +28,9 @@ public class ActionField extends JPanel {
 		
 	private boolean COLORDED_MODE = false;	
 	
-	private BattleField battleField; // = new BattleField();	
-	private Bullet bullet;//  = new Bullet(0, 0, 0);	
-	private Tank tank;// = new Tank();
+	private BattleField battleField;	
+	private Bullet bullet;	
+	private Tank tank;
 	
 
 	/**

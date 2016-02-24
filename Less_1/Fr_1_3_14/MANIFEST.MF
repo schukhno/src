@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: .
+Main-Class: Less_1.Fr_1_3_14.Launcher
+
