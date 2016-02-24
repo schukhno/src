@@ -1,0 +1,5 @@
+package Less_2.Fr_1_1_5;
+
+public enum Color {
+   RED, BLUE, GREEN, YELLOW, ORANGE, PINK, BROWN, BLACK, WHITE, PURPLE, GREY, GOLD, AQUA, CORAL, OLIVE, SILVER
+}
