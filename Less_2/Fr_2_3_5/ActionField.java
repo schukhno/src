@@ -20,12 +20,6 @@ public class ActionField extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	// 1 - top, 2 - bottom, 3 - left, 4 - right
-	private int up = 1;
-	private int down = 2;
-	private int left = 3;
-	private int right = 4;
-		
 	private boolean COLORDED_MODE = false;	
 	
 	private BattleField battleField;	
@@ -173,7 +167,7 @@ public class ActionField extends JPanel {
 	public ActionField() throws Exception {
 		battleField = new BattleField();
 		tank = new Tank(this,battleField);
-		bullet = new Bullet(-100,-100,Direction.DOWN);
+		bullet = new Bullet(-100,-100,Direction.NONE);
 		
 		JFrame frame = new JFrame("BATTLE FIELD, TANKs");
 		frame.setLocation(750, 150);
