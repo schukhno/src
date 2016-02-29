@@ -5,12 +5,12 @@ import java.util.Random;
 public class Tank {
 		
 	protected int speed = 5;
-	protected Direction direction;
-	protected int x;
-	protected int y;
+	private Direction direction;
+	private int x;
+	private int y;
 	
-	protected ActionField actionField;
-	protected BattleField battleField;
+	private ActionField actionField;
+	private BattleField battleField;
 	private Bullet bullet;
 	
 	public int getX() {

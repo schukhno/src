@@ -8,9 +8,9 @@ public class Tiger extends Tank{
 		return armor;
 	}
 	
-	public Tiger(int x, int y, Direction direction, ActionField af,	BattleField bf, int armor) {
+	public Tiger(int x, int y, Direction direction, ActionField af,	BattleField bf) {
 		super(x, y, direction, af, bf);
-		this.armor = armor;
+		armor = 1;
 	}
 	
 }
