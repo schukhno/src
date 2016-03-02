@@ -6,10 +6,21 @@ public class Book {
 	private BookGenre bookGenre;
 	private long articul;
 	private double price;	
+	private int amountBook;
+	private int amountBookSold;
 
+	public double getAmountBook() {
+		return amountBook;
+	}
+
+	public double getAmountBookSold() {
+		return amountBookSold;
+	}
+	
 	public double getPrice() {
 		return price;
 	}
+	
 	public void setPrice(double price) {
 		this.price = price;
 	}	
